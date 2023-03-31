@@ -91,7 +91,9 @@ To view the project, run `rails s`.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- No future features required
+- [ ] **Like a post**
+- [ ] **Comment on a post**
+- [ ] ** Create UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
