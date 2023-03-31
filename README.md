@@ -93,7 +93,7 @@ To view the project, run `rails s`.
 
 - [ ] **Like a post**
 - [ ] **Comment on a post**
-- [ ] ** Create UI**
+- [ ] **Create UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
