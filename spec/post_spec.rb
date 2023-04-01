@@ -5,7 +5,6 @@ describe Post, type: :model do
     Post.new(
       title: 'My first post',
       text: 'Happy coding!',
-      comments_counter: 4,
       comments_counter: 9,
       likes_counter: 12
     )
