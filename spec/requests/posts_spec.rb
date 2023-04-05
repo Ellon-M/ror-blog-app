@@ -13,7 +13,7 @@ describe "/posts", type: :request do
       expect(response).to render_template(:index)
     end
     it "contains the placeholder text" do
-      expect(response.body).to include("Here is a list of posts for all users")
+      expect(response.body).to include("Here is a list of posts for a specific user")
     end
   end
 
@@ -28,7 +28,7 @@ describe "/posts", type: :request do
       expect(response).to render_template(:show)
     end
     it "contain the placeholder text" do
-      expect(response.body).to include("Here is a list of posts for a given user")
+      expect(response.body).to include("Here is a post for a given user")
     end
   end
 end

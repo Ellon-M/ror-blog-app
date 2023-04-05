@@ -4,7 +4,7 @@ describe "/posts", type: :request do
 
   describe "GET /index" do
     before (:example) do
-      get '/users/1/posts'
+      get '/users'
     end
     it "has a successful response" do
       expect(response).to be_successful
@@ -19,7 +19,7 @@ describe "/posts", type: :request do
 
   describe "GET /show" do
     before (:example) do
-      get '/users/1/posts/1'
+      get '/users/1/'
     end
     it "has a successful response" do
       expect(response).to be_successful
