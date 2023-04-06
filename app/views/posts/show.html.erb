@@ -1,1 +1,18 @@
-<h1>Here is a post for a given user</h1>
+<section class="posts-container">
+  <div class="posts">
+    <div class="post-detail-body">
+      <h3>Post #<%= @post.id%> by <%= @post.author.name %></h3>
+      <div class="post-comments">
+        <span class="comments">Comments: <%= @post.comments_counter || 0%>, </span>
+        <span class="likes">Likes: <%= @post.likes_counter || 0 %> </span>
+      </div>
+    </div>
+    <p class="post-text"> <%= @post.text %> </p>
+  </div>
+  <ul class="comments-list">
+    Comments:
+    <% @comments.each do |comment| %>
+      <li class="comment"><%= comment.author.name%>: <%= comment.text %></li>
+    <% end %>
+  </ul>
+</section>
