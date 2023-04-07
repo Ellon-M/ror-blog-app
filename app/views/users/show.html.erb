@@ -1,1 +1,39 @@
-<h1>Here is a list of selected users</h1>
+<section class="user-info-container">
+  <div class="user-info-cont-top">
+    <div class=".img-user-container">
+      <img class="img-user" src="<%= @user.photo %>" alt="User Avatar">
+    </div>
+
+    <div class="user-show">
+      <div class="user-details-link">
+        <h2 class="user-name"><%= @user.name %></h2>
+        <p class="user-post-count">Number of posts: <%= @user.posts_counter || 0 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-info-bio-div">
+    <h3>Bio</h3>
+    <p><%= @user.bio%></p>
+  </div>
+
+  <div class="user-posts-cont">
+    <ul class="user-post-list">
+      <% @user.recent_posts.each_with_index do |post, i| %>
+        <li class="user-post">
+          <a href="<%=@user.id%>/posts/<%=post.id%>">
+          <h3>Post #<%= i + 1 %> </h3>
+          <p><%= post.text %></p>
+          <div class="post-interaction-cont">
+            <span class="comments">Comments: <%= post.comments_counter || 0 %>, </span>
+            <span class="likes">Likes:<%= post.likes_counter || 0 %></span>
+          </div>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <a class="see-all-posts-link" href="<%= @user.id %>/posts">See all posts</a>
+
+</section>
