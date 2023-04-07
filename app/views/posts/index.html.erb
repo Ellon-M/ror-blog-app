@@ -1,11 +1,11 @@
 <section class="posts-container">
   <div class="posts">
-    <div class="img-con">
-      <img class="post-img" src="<%= @user.photo %>" alt="User Avatar"/>
+    <div class="img-user-container">
+      <img class="img-user" src="<%= @user.photo %>" alt="User Avatar"/>
     </div>
 
     <div class="user-body">
-      <a>
+      <a class="user-details-link">
         <h2 class="user-name"><%= @user.name%></h2>
         <p class="user-post-count">Number of posts: <%= @user.posts_counter || 0 %></p>
       </a>

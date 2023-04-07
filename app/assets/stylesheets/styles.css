@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+}
+
+.users-container {
+  margin-bottom: 4rem;
+  width: 100%;
+  padding: 6rem;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+}
+
+.img-user-container {
+  width: 3.5rem;
+}
+
+.img-user {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.user-details {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.user-details-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  margin-left: 3rem;
+}
+
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  margin-bottom: 4rem;
+}
+
+.user-info-cont-top {
+  display: flex;
+  border: 1px solid #ccc;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-show {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.user-info-bio-div {
+  padding: 0.5rem;
+}
+
+.user-info-bio-div h3,
+.user-post p {
+  margin-bottom: 0.7rem;
+}
+
+.user-info-bio-div p {
+  margin-top: 1rem;
+}
+
+.user-post-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.user-post {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #999;
+  padding: 0.5rem;
+  align-items: flex-start;
+}
+
+.user-post a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.post-interaction-cont {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+
+.see-all-posts-link {
+  display: flex;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 40px;
+  background-color: #414141;
+  margin: 0.5rem auto;
+}
+
+.posts-container {
+  margin-bottom: 4rem;
+}
+
+.posts {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #999;
+  padding: 0.5rem;
+}
+
+.post-details {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
