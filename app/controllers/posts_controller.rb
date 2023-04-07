@@ -12,7 +12,5 @@ class PostsController < ApplicationController
 
     @comments = @post.comments
     @likes = @post.likes
-
   end
-    
 end
