@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def show
     # a single post - with post details for a specific user
-    @posts = Post.where(author_id: params[:user_id])
+    @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
 
     @comments = @post.comments
