@@ -7,12 +7,23 @@
         <span class="likes">Likes: <%= @post.likes_counter || 0 %> </span>
       </div>
     </div>
+    <p class="post-text alert"> <%= flash[:notice] %> </p>
     <p class="post-text"> <%= @post.text %> </p>
+  </div>
+  <div>
+    <%= form_with model: @like, url:  user_post_likes_path(@user, @post) do |form|%>
+      <%= form.submit 'Like post', class: 'submit' %>
+    <%end%>
   </div>
   <ul class="comments-list">
     Comments:
     <% @comments.each do |comment| %>
-      <li class="comment"><%= comment.author.name%>: <%= comment.text %></li>
+      <li class="comment"><%= @user.name%>: <%= comment.text %></li>
     <% end %>
   </ul>
 </section>
+
+
+<button class="see-all-posts-link">
+    <%= link_to "Create new comment", new_user_post_comment_path(@user, @post) %>
+</button>
