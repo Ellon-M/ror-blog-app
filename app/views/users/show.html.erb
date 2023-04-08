@@ -21,7 +21,7 @@
     <ul class="user-post-list">
       <% @user.recent_posts.each_with_index do |post, i| %>
         <li class="user-post">
-          <a href="<%=@user.id%>/posts/<%=post.id%>">
+          <a href=<%=user_post_path(@user, post)%>>
           <h3>Post #<%= i + 1 %> </h3>
           <p><%= post.text %></p>
           <div class="post-interaction-cont">
@@ -34,6 +34,12 @@
     </ul>
   </div>
 
-  <a class="see-all-posts-link" href="<%= @user.id %>/posts">See all posts</a>
+  <button class="see-all-posts-link">
+    <%= link_to "see all post", user_posts_path(@user) %>
+  </button>
+  
+  <button class="see-all-post d-flex border">
+    <%= link_to "Create post", new_user_post_path(@user) %>
+  </button>
 
 </section>

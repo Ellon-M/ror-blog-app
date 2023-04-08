@@ -13,4 +13,23 @@ class PostsController < ApplicationController
     @comments = @post.comments
     @likes = @post.likes
   end
+
+  def new
+    @user = current_user
+    @post = Post.new
+  end
+
+  def create
+    @user = current_user
+    @post = @user.posts.new(author: @user, title: params[:post][:title], text: params[:post][:text])
+
+    if @post.save
+      @post.update_post_counter
+      flash[:notice] = 'Post created successfully'
+      redirect_to user_post_path(@user, @post)
+    else
+      flash.alert = 'Something Went Wrong. Please Try Again!'
+      render :new
+    end
+  end
 end

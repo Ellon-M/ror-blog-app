@@ -7,12 +7,13 @@
         <span class="likes">Likes: <%= @post.likes_counter || 0 %> </span>
       </div>
     </div>
+    <p class="post-text alert"> <%= flash[:notice] %> </p>
     <p class="post-text"> <%= @post.text %> </p>
   </div>
   <ul class="comments-list">
     Comments:
     <% @comments.each do |comment| %>
-      <li class="comment"><%= comment.author.name%>: <%= comment.text %></li>
+      <li class="comment"><%= @user.name%>: <%= comment.text %></li>
     <% end %>
   </ul>
 </section>
