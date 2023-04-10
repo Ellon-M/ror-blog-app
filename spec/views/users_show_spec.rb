@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'show user', type: :feature do
-  describe 'For user index' do
+  describe 'For user show' do
     before(:each) do
        visit '/'
       end
@@ -10,7 +10,7 @@ describe 'show user', type: :feature do
         page.has_selector?('img')
     end
 
-    scenario 'I can see the number of posts ' do
+    scenario 'I can see the number of posts' do
       first(".user-details-link").click
       expect(page).to have_content('number of posts')
     end
