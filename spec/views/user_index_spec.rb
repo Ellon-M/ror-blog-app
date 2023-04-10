@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Index page', type: :feature do
-  describe 'In the index page' do\
+  describe 'In the index page' do
     before :each do
       @user = User.create(
         name: 'Tom',
@@ -28,7 +28,7 @@ describe 'Index page', type: :feature do
 
     scenario 'When I click on a user, I am redirected to that users show page.' do
       visit '/'
-      first(".user-details-link").click
+      first('.user-details-link').click
       expect(page).to have_content('Bio')
     end
   end
