@@ -28,8 +28,8 @@
       <ul class="comments-list">
         Comments:
         <div class="comment-group">
-          <% post.includes(:comments).most_recent_comments.each do |comment| %>
-            <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
+          <% post.most_recent_comments.each do |comment| %>
+            <li class="comment"><%= comment.user.name %>: <%= comment.text %> </li>
           <% end %>
         </div>
       </ul>
