@@ -16,13 +16,14 @@
     <h3>Bio</h3>
     <p><%= @user.bio%></p>
   </div>
-
+  
   <div class="user-posts-cont">
     <ul class="user-post-list">
       <% @user.recent_posts.each_with_index do |post, i| %>
         <li class="user-post">
-          <a href=<%=user_post_path(@user, post)%>>
+          <a class="post-link" href=<%=user_post_path(@user, post)%>>
           <h3>Post #<%= i + 1 %> </h3>
+          <%= link_to post.title, user_post_path(@user, post)%>
           <p><%= post.text %></p>
           <div class="post-interaction-cont">
             <span class="comments">Comments: <%= post.comments_counter || 0 %>, </span>
@@ -35,7 +36,7 @@
   </div>
 
   <button class="see-all-posts-link">
-    <%= link_to "see all post", user_posts_path(@user) %>
+    <%= link_to "See all posts", user_posts_path(@user) %>
   </button>
   
   <button class="see-all-post d-flex border">

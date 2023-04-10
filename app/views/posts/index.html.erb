@@ -13,7 +13,7 @@
   </div>
 
   <div class="posts">
-    <% @posts.each_with_index do |post, index| %>
+    <% @posts.includes(:user).each_with_index do |post, index| %>
       <%= link_to  user_post_path(@user, post.id) do %>
         <div class="post">
           <h3>Post #<%= index + 1 %></h3>
@@ -29,11 +29,12 @@
         Comments:
         <div class="comment-group">
           <% post.most_recent_comments.each do |comment| %>
-            <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
+            <li class="comment"><%= comment.user.name %>: <%= comment.text %> </li>
           <% end %>
         </div>
       </ul>
     <% end %>
+    <div class="will-paginate"></div>
   </div>
 
 </section>
