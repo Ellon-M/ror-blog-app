@@ -189,3 +189,52 @@ header {
   align-self: flex-end;
   justify-content: flex-end;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.field input {
+  width: 75%;
+  padding: 0.3rem;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  border: 2px solid #242424;
+}
+
+#new_user {
+  width: 100%;
+}
+
+.field-rem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions input {
+  width: 75%;
+  background-color: transparent;
+  padding: 0.3rem;
+  box-shadow: 2px 2px 2px 1px rgba(22, 22, 22, 0.6);
+}
