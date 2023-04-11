@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-  
   load_and_authorize_resource
-  
+
   def index
     # all posts for one user
     @posts = Post.where(author_id: params[:user_id])

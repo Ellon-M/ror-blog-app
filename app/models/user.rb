@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'user_id'
   has_many :likes, foreign_key: 'user_id'
 
-  Roles = %i[admin default].freeze
+  ROLES = %i[admin default].freeze
 
   def is?(role_requested)
     role == role_requested.to_s
