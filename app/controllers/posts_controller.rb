@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     # all posts for one user
     @posts = Post.where(author_id: params[:user_id])
@@ -31,5 +33,16 @@ class PostsController < ApplicationController
       flash.alert = 'Something Went Wrong. Please Try Again!'
       render :new
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = 'The Post was successfully deleted.'
+    redirect_to user_posts_url
+  end
+
+  def post_params
+    params.require(:post).permit(:Title, :Text)
   end
 end

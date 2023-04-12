@@ -238,3 +238,24 @@ form {
   padding: 0.3rem;
   box-shadow: 2px 2px 2px 1px rgba(22, 22, 22, 0.6);
 }
+
+.button_to {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.btn-danger {
+  margin: 0;
+  background-color: #ff4e4e;
+  padding: 0.6rem;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.comments-list {
+  padding: 1rem;
+}
+
+.comment {
+  margin-top: 0.5rem;
+}

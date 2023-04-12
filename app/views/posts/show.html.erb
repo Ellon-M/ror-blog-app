@@ -6,6 +6,12 @@
         <span class="comments">Comments: <%= @post.comments_counter || 0%>, </span>
         <span class="likes">Likes: <%= @post.likes_counter || 0 %> </span>
       </div>
+      <br>
+      <div class="delete">
+        <% if can? :destroy , @post %>
+          <%= button_to 'Delete', user_post_path(@user, @post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-danger" %>
+        <% end %>
+      </div>
     </div>
     <p class="post-text alert"> <%= flash[:notice] %> </p>
     <p class="post-text"> <%= @post.text %> </p>
@@ -19,6 +25,9 @@
     Comments:
     <% @comments.includes(:user).each do |comment| %>
       <li class="comment"><%= @user.name%>: <%= comment.text %></li>
+      <% if can? :destroy, comment %>
+        <%= button_to "Delete", user_post_comment_path(@user, @post, comment), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-danger"%>
+      <% end %>
     <% end %>
   </ul>
 </section>
