@@ -13,6 +13,10 @@ class Ability
         post.author == user
       end
 
+      can :destroy, Comment do |comment|
+        comment.user == user
+      end
+
       can %i[read create like], :all
     end
   end
