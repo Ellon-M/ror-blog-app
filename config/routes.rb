@@ -7,4 +7,11 @@ Rails.application.routes.draw do
       resources :likes, only: [:create]
     end
   end
+  scope :api, defaults: { format: :json }, module: :api, constraints: { subdomain: 'api' } do
+    scope :v1 do
+      resources :posts, only: [:index] do
+        resources :comments, only: [:index, :create]
+      end
+    end
+  end
 end
